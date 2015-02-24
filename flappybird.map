@@ -1,0 +1,314 @@
+AREA .  .ABS.
+	RADIX HEX
+	BASE 0000
+	SIZE 0000
+	ATTRIB ABS OVR
+	GLOBALS
+		l__HEAP	0000
+		l__BSEG	0000
+		l_.  .ABS.	0000
+		l__GSFINAL	0000
+		l__ISEG	0000
+		s_.  .ABS.	0000
+		s__HEADER	0000
+		l__XSEG	0000
+		.init	0000
+		l__OVERLAY	0000
+		l__LIT	0000
+		l__GSINITTAIL	0001
+		l__GSINIT	0005
+		l__DATA	0018
+		l__BSS	0097
+		l__HOME	01AC
+		l__BASE	01DA
+		l__HEADER	01E1
+		s__CODE	0200
+		l__CODE	1B81
+		s__HOME	1D81
+		s__BASE	1F2D
+		s__LIT	2107
+		s__GSINIT	2107
+		s__GSINITTAIL	210C
+		s__GSFINAL	210D
+		.OAM	C000
+		s__DATA	C0A0
+		s__BSS	C0B8
+		s__HEAP	C14F
+		s__BSEG	C14F
+		s__ISEG	C14F
+		s__XSEG	C14F
+		s__OVERLAY	C14F
+		.STACK	E000
+		.refresh_OAM	FF80
+AREA _CODE
+	RADIX HEX
+	BASE 0200
+	SIZE 1B81
+	ATTRIB REL CON
+	GLOBALS
+		_moveBird	0200
+		_background_tileset	022F
+		_bg_map	0A7F
+		_ground_map	0BAB
+		_flappybird_map	0BAE
+		_sprites_data	0BD2
+		_setupBird	0FD2
+		_updateBird	0FF7
+		_updateDeadBird	1117
+		_updateScore	1164
+		_hideScore	12F0
+		_showLogo	133C
+		_hideLogo	138F
+		_initPipe	13E2
+		_movePipe	1703
+		_hidePipe	1911
+		_introLoop	1936
+		_gameLoop	1957
+		_deadLoop	19FB
+		_resetGame	1A38
+		_main	1A77
+		__divschar_rrx_s	1BFB
+		__divschar_rrx_hds	1C02
+		__modschar_rrx_s	1C09
+		__modschar_rrx_hds	1C10
+		__divsint_rrx_s	1C15
+		__divsint_rrx_hds	1C21
+		__modsint_rrx_s	1C29
+		__modsint_rrx_hds	1C35
+		__divuchar_rrx_s	1C3B
+		__divuchar_rrx_hds	1C42
+		__moduchar_rrx_s	1C49
+		__moduchar_rrx_hds	1C50
+		__divuint_rrx_s	1C55
+		__divuint_rrx_hds	1C61
+		__moduint_rrx_s	1C69
+		__moduint_rrx_hds	1C75
+		.mod8	1C7B
+		.div8	1C7B
+		.mod16	1C83
+		.div16	1C83
+		.modu8	1CBD
+		.divu8	1CBD
+		.modu16	1CC0
+		.divu16	1CC0
+		_arand	1CFD
+		_initarand	1D29
+		_rand	1D56
+		_randw	1D56
+AREA _HEADER
+	RADIX HEX
+	BASE 0000
+	SIZE 01E1
+	ATTRIB ABS OVR
+	GLOBALS
+		_exit	01D2
+AREA _HOME
+	RADIX HEX
+	BASE 1D81
+	SIZE 01AC
+	ATTRIB REL CON
+	GLOBALS
+		.set_mode	1D81
+		.remove_VBL	1D91
+		.remove_LCD	1D97
+		.remove_TIM	1D9D
+		.remove_SIO	1DA3
+		.remove_JOY	1DA9
+		.add_VBL	1DAF
+		.add_LCD	1DB5
+		.add_TIM	1DBB
+		.add_SIO	1DC1
+		.add_JOY	1DC7
+		.remove_int	1DCD
+		.add_int	1DED
+		.wait_vbl_done	1E09
+		_wait_vbl_done	1E09
+		_display_off	1E20
+		.display_off	1E20
+		.serial_IO	1E41
+		_mode	1E70
+		_get_mode	1E79
+		_enable_interrupts	1E7E
+		_disable_interrupts	1E80
+		_reset	1E82
+		.reset	1E82
+		_set_interrupts	1E88
+		_remove_VBL	1E93
+		_remove_LCD	1E9E
+		_remove_TIM	1EA9
+		_remove_SIO	1EB4
+		_remove_JOY	1EBF
+		_add_VBL	1ECA
+		_add_LCD	1ED5
+		_add_TIM	1EE0
+		_add_SIO	1EEB
+		_add_JOY	1EF6
+		_clock	1F01
+		__printTStates	1F0A
+		banked_call	1F0B
+		banked_ret	1F24
+AREA _BASE
+	RADIX HEX
+	BASE 1F2D
+	SIZE 01DA
+	ATTRIB REL CON
+	GLOBALS
+		.set_sprite_prop	1F2D
+		_set_sprite_prop	1F3A
+		.mv_sprite	1F45
+		_move_sprite	1F54
+		_set_win_tiles	1F61
+		_set_win_data	1F75
+		_set_bkg_data	1F75
+		_set_sprite_data	1FC2
+		.padup	1FF1
+		_waitpadup	1FF1
+		.jpad	2001
+		.wait_pad	202E
+		_joypad	2035
+		_waitpad	203A
+		.set_sprite_tile	2044
+		_set_sprite_tile	2051
+		_initrand	205C
+		.initrand	205E
+		.copy_vram	2067
+		_get_data	2076
+		_set_data	2076
+		_set_bkg_tiles	2089
+		.set_xy_wtt	209D
+		.set_xy_btt	20AE
+		.set_xy_tt	20BD
+		_set_tiles	20EE
+AREA _LIT
+	RADIX HEX
+	BASE 2107
+	SIZE 0000
+	ATTRIB REL CON
+AREA _GSINIT
+	RADIX HEX
+	BASE 2107
+	SIZE 0005
+	ATTRIB REL CON
+	GLOBALS
+		gsinit	2107
+AREA _GSINITTAIL
+	RADIX HEX
+	BASE 210C
+	SIZE 0001
+	ATTRIB REL CON
+AREA _GSFINAL
+	RADIX HEX
+	BASE 210D
+	SIZE 0000
+	ATTRIB REL CON
+AREA _DATA
+	RADIX HEX
+	BASE C0A0
+	SIZE 0018
+	ATTRIB REL CON
+	GLOBALS
+		_x	C0A0
+		_y	C0A1
+		_i	C0A2
+		_x1	C0A3
+		_x2	C0A4
+		_joy	C0A5
+		_bird_x	C0A6
+		_bird_y	C0A7
+		_bird_frame	C0A8
+		_bird_frame_skip	C0A9
+		_bird_gravity	C0AA
+		_gameState	C0AC
+		_score	C0AD
+		_pipe	C0AE
+		_bird_flag	C0B4
+		_flash_frames	C0B5
+		_rand_seed	C0B6
+AREA _BSS
+	RADIX HEX
+	BASE C0B8
+	SIZE 0097
+	ATTRIB REL CON
+	GLOBALS
+		__cpu	C0B8
+		.mode	C0B9
+		__io_out	C0BA
+		__io_in	C0BB
+		__io_status	C0BC
+		.vbl_done	C0BD
+		__current_bank	C0BE
+		_sys_time	C0BF
+		.sys_time	C0BF
+		.int_0x40	C0C1
+		.int_0x48	C0D1
+		.int_0x50	C0E1
+		.int_0x58	C0F1
+		.int_0x60	C101
+		.randhi	C14D
+		.randlo	C14E
+AREA _HEAP
+	RADIX HEX
+	BASE C14F
+	SIZE 0000
+	ATTRIB REL CON
+	GLOBALS
+		_malloc_heap_start	C14F
+AREA _OVERLAY
+	RADIX HEX
+	BASE C14F
+	SIZE 0000
+	ATTRIB REL CON
+AREA _ISEG
+	RADIX HEX
+	BASE C14F
+	SIZE 0000
+	ATTRIB REL CON
+AREA _BSEG
+	RADIX HEX
+	BASE C14F
+	SIZE 0000
+	ATTRIB REL CON
+AREA _XSEG
+	RADIX HEX
+	BASE C14F
+	SIZE 0000
+	ATTRIB REL CON
+MODULES
+	FILE /opt/gbdk/lib/small/asxxxx/gb/crt0.o
+		NAME Runtime
+	FILE flappybird.o
+		NAME lcc322830
+LIBRARIES
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_prop.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gbz80/gbz80.lib
+		MODULE div.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE mv_spr.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_wi_t.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE arand.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_data.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE pad.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_spr.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE rand.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE cpy_data.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_bk_t.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_xy_t.o
+USERBASEDEF
+	_CODE=0x0200
+	_DATA=0xC0A0
+	_CODE_1=0x4000
+USERGLOBALDEF
+	.OAM=0xC000
+	.STACK=0xE000
+	.refresh_OAM=0xFF80
+	.init=0x0000

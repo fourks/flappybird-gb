@@ -1,0 +1,187 @@
+; no$gmb format .sym file
+; Generated automagically by ASxxxx linker V01.75 (SDK 3.0.0)
+; Area: .  .ABS.
+00:0000 s__HEADER
+00:0000 .init
+00:0200 s__CODE
+00:1D81 s__HOME
+00:1F2D s__BASE
+00:2107 s__LIT
+00:2107 s__GSINIT
+00:210C s__GSINITTAIL
+00:210D s__GSFINAL
+00:C000 .OAM
+00:C0A0 s__DATA
+00:C0B8 s__BSS
+00:C14F s__HEAP
+00:C14F s__BSEG
+00:C14F s__ISEG
+00:C14F s__XSEG
+00:C14F s__OVERLAY
+00:E000 .STACK
+00:FF80 .refresh_OAM
+; Area: _CODE
+00:0200 _moveBird
+00:022F _background_tileset
+00:0A7F _bg_map
+00:0BAB _ground_map
+00:0BAE _flappybird_map
+00:0BD2 _sprites_data
+00:0FD2 _setupBird
+00:0FF7 _updateBird
+00:1117 _updateDeadBird
+00:1164 _updateScore
+00:12F0 _hideScore
+00:133C _showLogo
+00:138F _hideLogo
+00:13E2 _initPipe
+00:1703 _movePipe
+00:1911 _hidePipe
+00:1936 _introLoop
+00:1957 _gameLoop
+00:19FB _deadLoop
+00:1A38 _resetGame
+00:1A77 _main
+00:1BFB __divschar_rrx_s
+00:1C02 __divschar_rrx_hds
+00:1C09 __modschar_rrx_s
+00:1C10 __modschar_rrx_hds
+00:1C15 __divsint_rrx_s
+00:1C21 __divsint_rrx_hds
+00:1C29 __modsint_rrx_s
+00:1C35 __modsint_rrx_hds
+00:1C3B __divuchar_rrx_s
+00:1C42 __divuchar_rrx_hds
+00:1C49 __moduchar_rrx_s
+00:1C50 __moduchar_rrx_hds
+00:1C55 __divuint_rrx_s
+00:1C61 __divuint_rrx_hds
+00:1C69 __moduint_rrx_s
+00:1C75 __moduint_rrx_hds
+00:1C7B .mod8
+00:1C7B .div8
+00:1C83 .mod16
+00:1C83 .div16
+00:1CBD .modu8
+00:1CBD .divu8
+00:1CC0 .modu16
+00:1CC0 .divu16
+00:1CFD _arand
+00:1D29 _initarand
+00:1D56 _rand
+00:1D56 _randw
+; Area: _HEADER
+00:01D2 _exit
+; Area: _HOME
+00:1D81 .set_mode
+00:1D91 .remove_VBL
+00:1D97 .remove_LCD
+00:1D9D .remove_TIM
+00:1DA3 .remove_SIO
+00:1DA9 .remove_JOY
+00:1DAF .add_VBL
+00:1DB5 .add_LCD
+00:1DBB .add_TIM
+00:1DC1 .add_SIO
+00:1DC7 .add_JOY
+00:1DCD .remove_int
+00:1DED .add_int
+00:1E09 .wait_vbl_done
+00:1E09 _wait_vbl_done
+00:1E20 _display_off
+00:1E20 .display_off
+00:1E41 .serial_IO
+00:1E70 _mode
+00:1E79 _get_mode
+00:1E7E _enable_interrupts
+00:1E80 _disable_interrupts
+00:1E82 _reset
+00:1E82 .reset
+00:1E88 _set_interrupts
+00:1E93 _remove_VBL
+00:1E9E _remove_LCD
+00:1EA9 _remove_TIM
+00:1EB4 _remove_SIO
+00:1EBF _remove_JOY
+00:1ECA _add_VBL
+00:1ED5 _add_LCD
+00:1EE0 _add_TIM
+00:1EEB _add_SIO
+00:1EF6 _add_JOY
+00:1F01 _clock
+00:1F0A __printTStates
+00:1F0B banked_call
+00:1F24 banked_ret
+; Area: _BASE
+00:1F2D .set_sprite_prop
+00:1F3A _set_sprite_prop
+00:1F45 .mv_sprite
+00:1F54 _move_sprite
+00:1F61 _set_win_tiles
+00:1F75 _set_win_data
+00:1F75 _set_bkg_data
+00:1FC2 _set_sprite_data
+00:1FF1 .padup
+00:1FF1 _waitpadup
+00:2001 .jpad
+00:202E .wait_pad
+00:2035 _joypad
+00:203A _waitpad
+00:2044 .set_sprite_tile
+00:2051 _set_sprite_tile
+00:205C _initrand
+00:205E .initrand
+00:2067 .copy_vram
+00:2076 _get_data
+00:2076 _set_data
+00:2089 _set_bkg_tiles
+00:209D .set_xy_wtt
+00:20AE .set_xy_btt
+00:20BD .set_xy_tt
+00:20EE _set_tiles
+; Area: _LIT
+; Area: _GSINIT
+00:2107 gsinit
+; Area: _GSINITTAIL
+; Area: _GSFINAL
+; Area: _DATA
+00:C0A0 _x
+00:C0A1 _y
+00:C0A2 _i
+00:C0A3 _x1
+00:C0A4 _x2
+00:C0A5 _joy
+00:C0A6 _bird_x
+00:C0A7 _bird_y
+00:C0A8 _bird_frame
+00:C0A9 _bird_frame_skip
+00:C0AA _bird_gravity
+00:C0AC _gameState
+00:C0AD _score
+00:C0AE _pipe
+00:C0B4 _bird_flag
+00:C0B5 _flash_frames
+00:C0B6 _rand_seed
+; Area: _BSS
+00:C0B8 __cpu
+00:C0B9 .mode
+00:C0BA __io_out
+00:C0BB __io_in
+00:C0BC __io_status
+00:C0BD .vbl_done
+00:C0BE __current_bank
+00:C0BF _sys_time
+00:C0BF .sys_time
+00:C0C1 .int_0x40
+00:C0D1 .int_0x48
+00:C0E1 .int_0x50
+00:C0F1 .int_0x58
+00:C101 .int_0x60
+00:C14D .randhi
+00:C14E .randlo
+; Area: _HEAP
+00:C14F _malloc_heap_start
+; Area: _OVERLAY
+; Area: _ISEG
+; Area: _BSEG
+; Area: _XSEG
