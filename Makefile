@@ -18,5 +18,5 @@ all: all-img flappybird.gb
 %.gb:	%.o
 	$(CC) -o $@ $<
 
-clean: clean-img
+clean:
 	rm -f *.o *.lst *.map *.gb *~ *.rel *.cdb *.ihx *.lnk *.sym *.asm
